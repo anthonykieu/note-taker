@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const { filterByQuery, findById, createNewNote, validateNote, } = require("../../lib/notes");
-const {notes} = require("../../db/db");
+const notes = require("../../db/db");
+const { v4: uuidv4 } = require('uuid');
 
 router.get("/notes", (req, res) => {
     let results = notes;
@@ -20,15 +21,12 @@ router.get("/notes/:id", (req, res) => {
 });
 
 router.post("/notes", (req, res) => {
-    // set id based on what the next index of the array will be
-    //   req.body.id = notes.length.toString();
-    req.body.id = `note-${createUID(3)}`;
-    // if any data in req.body is incorrect, send 400 error back
-    if (!validateNote(req.body)) {
-        res.status(400).send("The .");
-    } else {
-        const notes = createNewNote(req.body, notes);
-        res.json(note);
-    }
+    const note = req.body
+    note.id = uuidv4();
+    console.log('posted')
+    console.log(note);
+    const newNote = createNewNote(note, notes);
+    res.json(newNote);
+
 });
 module.exports = router;
