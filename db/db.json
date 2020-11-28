@@ -1,44 +1,12 @@
-{
-  "notes": [
-    {
-      "title": "yy",
-      "text": "rr",
-      "id": "28ed4fc2-6271-48be-b98d-ab16223b3350"
-    },
-    {
-      "title": "kk",
-      "text": "cc",
-      "id": "e3031e34-7fc7-45b6-9a43-be3dcfb4d41e"
-    },
-    {
-      "title": "bb",
-      "text": "nn",
-      "id": "92e59d7a-1774-47cc-9f1f-d286b4e9eb4f"
-    },
-    {
-      "title": "qq",
-      "text": "ss",
-      "id": "c22c9c68-78f6-4cf5-b763-daabe2fca308"
-    },
-    {
-      "title": "hh",
-      "text": "mm",
-      "id": "6a2c0d30-cb9d-4a0a-8e68-a30b19466e8f"
-    },
-    {
-      "title": "oo",
-      "text": "mm",
-      "id": "c7085415-a7bd-44c5-bc33-42f9b084f7f4"
-    },
-    {
-      "title": "d",
-      "text": "d",
-      "id": "1810e981-1b37-4107-9ebf-450892e7cc5e"
-    },
-    {
-      "title": "Add",
-      "text": "another",
-      "id": "1d0bace7-eb4e-484f-90ce-d7ffc2bf4ca2"
-    }
-  ]
-}
+[
+  {
+    "title": "oo",
+    "text": "mm",
+    "id": "c7085415-a7bd-44c5-bc33-42f9b084f7f4"
+  },
+  {
+    "title": "Check2",
+    "text": "Working",
+    "id": "9a018b72-9bd7-4edb-a5cf-e71427178043"
+  }
+]
