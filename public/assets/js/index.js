@@ -1,5 +1,3 @@
-// import 'jsdom-global/register';
-
 let noteTitle;
 let noteText;
 let saveNoteBtn;
