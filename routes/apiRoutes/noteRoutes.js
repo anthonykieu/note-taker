@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { filterByQuery, findById, createNewNote, validateNote, } = require("../../lib/notes");
-const notes = require("../../db/db");
+const {notes} = require("../../db/db");
 const { v4: uuidv4 } = require('uuid');
 
 router.get("/notes", (req, res) => {
@@ -21,11 +21,12 @@ router.get("/notes/:id", (req, res) => {
 });
 
 router.post("/notes", (req, res) => {
-    const note = req.body
+    let results = notes;
+    const note = req.body;
     note.id = uuidv4();
-    console.log('posted')
+    console.log('posted');
     console.log(note);
-    const newNote = createNewNote(note, notes);
+    const newNote = createNewNote(note, results);
     res.json(newNote);
 
 });
