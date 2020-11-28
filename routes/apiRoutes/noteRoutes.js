@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { filterByQuery, findById, createNewNote, validateNote, } = require("../../public/assets/js/index");
-const notes = require("../../db/db");
+const {notes} = require("../../db/db");
 
 router.get("/notes", (req, res) => {
     let results = notes;
@@ -25,7 +25,7 @@ router.post("/notes", (req, res) => {
     req.body.id = `note-${createUID(3)}`;
     // if any data in req.body is incorrect, send 400 error back
     if (!validateNote(req.body)) {
-        res.status(400).send("The animal is not properly formatted.");
+        res.status(400).send("The .");
     } else {
         const notes = createNewNote(req.body, notes);
         res.json(note);

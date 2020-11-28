@@ -12,5 +12,8 @@
     "create-id": "^1.0.2",
     "create-unique-id": "^1.0.2",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "jsdom-global": "3.0.2"
   }
 }
