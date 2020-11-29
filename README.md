@@ -3,7 +3,7 @@
 ## Description
 This Note-Taker application was built to allow a user to add notes using a full stack approach. The server code was built using npm express and communicated with the front end using api routes. 
 
-![Website Image](.public/assets/images/webpage.png)
+![Website Image](./public/assets/images/webpage.png)
 
 ## Table of Contents
 * [Installation](#installation)
