@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { filterByQuery, findById, createNewNote, validateNote, deleteNote } = require("../../lib/notes");
+const { filterByQuery, findById, createNewNote, validateNote } = require("../../lib/notes");
 const notes = require("../../db/db");
 const { v4: uuidv4 } = require('uuid');
 const fs = require("fs");
@@ -17,19 +17,15 @@ router.post("/notes", (req, res) => {
     let results = notes;
     const note = req.body;
     note.id = uuidv4();
-    console.log('posted');
-    console.log(note);
     const newNote = createNewNote(note, results);
+    // if any data in req.body is incorrect, send 400 error back
+    // if (!validateNote(note)) {
+    //     res.status(400).send("In complete.");
+    // } else {
+    //     const newNote = createNewNote(note, results);   
+    // }
     res.json(newNote);
-
 });
-
-//Delete Note
-// router.delete("/notes/:id", (req, res) => {
-//     let deletedNote = req.params.id;
-//     const newArray = deleteNote(deletedNote, notes);
-//     res.json(newArray);
-// });
 
 router.delete("/notes/:id", (req, res) => {
     let deletedNote = req.params.id;
